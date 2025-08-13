@@ -1,0 +1,12 @@
+[Unit]
+Description=Copyparty Server
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/copyparty/copyparty.py -c /opt/copyparty/copyparty.config
+WorkingDirectory=/opt/copyparty
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
